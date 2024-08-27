@@ -1,3 +1,4 @@
+--Cusotm thirdperson command that can be toggled with rn_togglethirdperson or !thirdperson in chat
 if SERVER then
     util.AddNetworkString("ToggleThirdPerson")
 
