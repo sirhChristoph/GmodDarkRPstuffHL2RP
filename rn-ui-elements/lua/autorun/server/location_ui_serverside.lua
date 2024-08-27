@@ -24,7 +24,7 @@ hook.Add("Initialize", "CheckTeamDefinitions", function()
     timer.Create("CheckTeamDefinitions", 10, 0, function()
         if _G.allowedTeams then
             -- Timer to periodically update player area messages
-            timer.Create("UpdatePlayerAreaMessages", 4, 0, function()
+            timer.Create("UpdatePlayerAreaMessages", 4, 0, function() --update every 4 seconds, change to whatever you want. More time means less server load.
                 for _, player in ipairs(player.GetAll()) do
                     if _G.allowedTeams[player:Team()] then
                         local message = GetPlayerAreaMessage(player)
