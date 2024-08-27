@@ -15,4 +15,4 @@ I tried to add comments in places to make it easy to understand.
 - forcefields adds forcefields of different sizes that can be toggled with "/ff" command in chat if a player is in the correct team, looking at it and are within defined distance from it.
     spawn forcefield can be toggled by defined ULX ranks from anywhere on the map using "/sff" command in chat.
 - instant-chargers are basically health and armour chargers that instanly set hp or armour to what is defined in jobs.lua and can only be used by certain teams.
-- ui-elements adds location print on the players screen, civil protection death counter and overwatch death counter. Everything to make it work must be defined in the files, have a look.
+- ui-elements adds location print on the players screen, civil protection death counter and overwatch death counter, combine overlay for specified teams. Everything to make it work must be defined in the files, have a look.
