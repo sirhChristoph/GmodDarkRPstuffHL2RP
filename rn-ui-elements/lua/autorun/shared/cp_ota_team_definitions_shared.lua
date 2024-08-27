@@ -1,5 +1,5 @@
 --autorun/shared/cp_ota_team_definitions_shared.lua
-hook.Add("loadCustomDarkRPItems", "DefineTeams", function()
+hook.Add("loadCustomDarkRPItems", "DefineTeams", function() -- Waits for DarkRP to fully load to prevent NIL error with teams.
     -- Define the teams
     CivilProtectionTeams = {
         [TEAM_CPO] = true,
