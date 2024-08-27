@@ -1,4 +1,4 @@
--- Unique identifier for the hook
+-- Unique identifier for the hook to prevent interference
 local LocationUIhook = "DrawAreaText_Unique"
 
 -- Hook to draw text on the screen
