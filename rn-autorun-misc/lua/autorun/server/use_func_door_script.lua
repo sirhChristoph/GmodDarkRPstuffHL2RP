@@ -1,23 +1,4 @@
---AddCSLuaFile()
-
---if ( SERVER ) then return end
-
-
--- ORIGINAL BELOW: anybody can open the door unless it is locked by the team that owns it using the DarkRP keys
-
---hook.Add("PlayerUse", "OpenFuncDoor", function(ply, ent)
---    if ent:GetClass() == "func_door" then
---        ent:Fire("Open")
---        return false -- Prevent default behavior
---    end
---end)
-
-
-
--- NEW VERSION BELOW: the door can only be opened (with the use key) if the player is the job(team) / doorgroup / owner of the door.
-
-
-
+-- Doesn't work if door is owned by a job, must be owner or have a job in the doorgroup that owns it. Idk why it doesn't work with single job ownership
 -- Table to keep track of the last time a player pressed the use key
 local lastUsePress = {}
 
