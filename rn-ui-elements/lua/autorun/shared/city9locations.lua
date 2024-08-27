@@ -1,4 +1,6 @@
 --autorun/shared/city9locations.lua
+--set up some locations already, just use the xyz values from "getpos" ingame and adjust as needed.
+--do this from 2 positions to make a cube for the area
 city9locations = {
     {min = Vector(8637.761719, -3198.484375, 69.552444), max = Vector(5539.775879, -5794.662109, 781.254395), message = "Location: High Priority Region 1"},
     {min = Vector(8720.031250, -6287.913086, 70), max = Vector(9155.768555, -4533.894531, 528.949768), message = "Location: HPR 1 Garage"},
