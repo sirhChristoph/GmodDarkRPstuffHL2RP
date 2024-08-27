@@ -39,8 +39,8 @@ hook.Add("PostGamemodeLoaded", "CheckTeamsAndLoadOverlay", function()
             ApplyOverlay(ply)
         end)
 
-        print("Overlay teams table successfully created.")
+        print("Overlay teams table successfully created.") --Debug print, can be removed.
     else
-        print("Error: One or more TEAM_* constants are not defined.")
+        print("Error: One or more TEAM_* constants are not defined.") --Debug print, can be removed.
     end
 end)
