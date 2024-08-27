@@ -1,0 +1,8 @@
+"AddonInfo"
+{
+    "name"        "RN UI Elements"
+    "version"     "0.1"
+    "up_date"     "2024-08-25"
+    "author_name" "sirhChristoph"
+    "info"        "Displays location text on the player's screen when they enter zones defined in zones_serverside.lua"
+}
