@@ -1,4 +1,3 @@
--- Doesn't work if door is owned by a job, must be owner or have a job in the doorgroup that owns it. Idk why it doesn't work with single job ownership
 -- Table to keep track of the last time a player pressed the use key
 local lastUsePress = {}
 
@@ -18,15 +17,15 @@ hook.Add("PlayerUse", "OpenFuncDoorWithUseKey", function(ply, ent)
 
             -- Check if the player is in the allowed teams
             if allowedTeams and not hasAccess then
-                for _, team in ipairs(allowedTeams) do
-                    if ply:Team() == team then
+                for team, allowed in pairs(allowedTeams) do
+                    if allowed and ply:Team() == team then
                         hasAccess = true
                         break
                     end
                 end
             end
 
-            if hasAccess or ply == owner then
+            if hasAccess or (owner and ply == owner) then
                 ent:Fire("Open")
             else
                 -- Get the current time
@@ -42,7 +41,3 @@ hook.Add("PlayerUse", "OpenFuncDoorWithUseKey", function(ply, ent)
         end
     end
 end)
-
--- Note that the function to allow a single Job/Team to open a door does not work
--- Even if the player is the same Job/Team that owns the door, the following will be printed to chat
--- "You do not have access to open this door."
