@@ -1,14 +1,28 @@
 AddCSLuaFile("autorun/shared/cp_ota_team_definitions_shared.lua")
 include("autorun/shared/cp_ota_team_definitions_shared.lua")
 
-AddCSLuaFile("autorun/shared/city9locations.lua")
 AddCSLuaFile("autorun/client/location_ui_clientside.lua")
-local city9locations = include("autorun/shared/city9locations.lua")
+
+-- Function to get the location table based on the current map
+local function GetLocationTable()
+    local mapName = game.GetMap()
+    local locationFile = "autorun/shared/" .. mapName .. "locations.lua"
+    
+    if file.Exists(locationFile, "LUA") then
+        AddCSLuaFile(locationFile)
+        return include(locationFile)
+    else
+        print("Location file for map " .. mapName .. " not found!")
+        return {}
+    end
+end
+
+local locations = GetLocationTable()
 
 -- Function to get the area message for a player
 local function GetPlayerAreaMessage(player)
     local pos = player:GetPos()
-    for _, location in ipairs(city9locations) do
+    for _, location in ipairs(locations) do
         if pos:WithinAABox(location.min, location.max) then
             return location.message
         end
