@@ -21,7 +21,7 @@ city9locations = {
     {min = Vector(9976.533203, -1268.734863, 381.211700), max = Vector(10363.820312, -2520.717285, 640.031250), message = "Location: Trainstation 404 Catwalk"},
     {min = Vector(7455.968750, -2143.999756, 120), max = Vector(6795.325684, -1723.895508, 339.161194), message = "Location: CWU Laundromat"},
     {min = Vector(9286.775391, -2496.271484, 67.294701), max = Vector(9908.083008, -1868.439209, 361.021179), message = "Location: CWU Hospital"},
-    -- Add other zones below with a comma at the end of the zone definition.
+    -- Add other zones below with a comma at the end of the zone definition. {min = Vector(0, 0, 0), max = Vector(1, 1, 1), message = "Location: Example"},
 }
 
 return city9locations
